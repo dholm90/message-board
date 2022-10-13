@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the #{title}
+
+  h2 Messages
+  ul
+    each message in  messages
+      li 
+        p Message: #{message.text}
+        p User: #{message.user}
+        p Date Adedd: #{message.added}
+      hr
+
+  a(href="/new") New Message
+
+
